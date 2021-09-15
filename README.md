@@ -360,11 +360,11 @@ $(function() {
 
 
 ```
-[![appjs1.png](https://i.postimg.cc/4N015vPK/appjs1.png)](https://postimg.cc/gnvRcZfd)
+[![1-26.png](https://i.postimg.cc/ydKJ0ZJ2/1-26.png)](https://postimg.cc/XZ27bXkg)
 
-**บรรทัดที่ 7-19**  เป็นการดึงข้อมูลจาก ```Nfts.json``` ซึ่งบรรจุข้อมูลของเด็กทั้ง 16 คน มาใช้ในฟังก์ชั่น For loop ซึ่งสั่งให้โปรแกรมค้นหาข้อมูลเรียงตาม ```nftId``` ตั้งแต่คนแรกคือ id 0 จนถึง id 15 แล้วนำไปแสดงผลเชื่อมกับ ```NftTemplate``` ซึ่งเป็นเทมเพลตที่สร้างไว้ใน ```index.html```
+**บรรทัดที่ 7-19**  เป็นการดึงข้อมูลจาก ```Nfts.json``` ซึ่งบรรจุข้อมูลของ nft ทั้ง 16 ชิ้น มาใช้ในฟังก์ชั่น For loop ซึ่งสั่งให้โปรแกรมค้นหาข้อมูลเรียงตาม ```nftId``` ตั้งแต่ชิ้นแรกคือ id 0 จนถึง id 15 แล้วนำไปแสดงผลเชื่อมกับ ```NftTemplate``` ซึ่งเป็นเทมเพลตที่สร้างไว้ใน ```index.html```
 
-[![appjs2.png](https://i.postimg.cc/nhkvC6rt/appjs2.png)](https://postimg.cc/sMMBLH5n)
+[![26-48.png](https://i.postimg.cc/yNp183mF/26-48.png)](https://postimg.cc/7C78B6Q6)
 
 **บรรทัดที่ 26-46** เป็นการระบุว่าจะใช้ web3 (บล็อกเชน) แบบใดในการเชื่อมต่อกับ smart contract โดยเริ่มจาก Metamask ,Legacy browser และ Ganache ตามลำดับ หากต้องการใช้เฉพาะอันใดอันหนึ่งก็ให้ทำการ comment บรรทัดที่เหลือ  
 

@@ -1,9 +1,11 @@
    # "NFTs paradise"
  
    NFTs paradise เป็น Dapp แบบเว็บแอพพลิเคชั่น ในการจองสิทธิ์ที่จะเข้าร่วมประมูล NFTs ไฟล์เพลงและภาพ  ของศิลปินชื่อดังทั้งไทยและต่างประเทศ ซึ่งในที่นี้มี 16 ชิ้น ซึ่งการจองสิทธิ์นี้ก็เพื่อไม่ให้พลาดการเป็นเจ้าของ โดย NFT แต่ละชิ้น จะแจ้งวันที่จะประมูลให้ทราบ  หากไม่จองไว้ภายในวันที่กำหนด (ซึ่งไม่ได้เขียนโค้ดตรงนี้ไว้ เนื่องจากยังไม่มีความรู้) จะไม่มีสิทธิ์ที่จะเข้าประมูลชิ้นงานดังกล่าว
+   [![NFTs-paradise-Google-Chrome-9-15-2021-4-49-54-PM.png](https://i.postimg.cc/L4tGKLgy/NFTs-paradise-Google-Chrome-9-15-2021-4-49-54-PM.png)](https://postimg.cc/nML3qsk7)
+   [![NFTs-paradise-Google-Chrome-9-15-2021-4-50-21-PM.png](https://i.postimg.cc/vZxZv0Dq/NFTs-paradise-Google-Chrome-9-15-2021-4-50-21-PM.png)](https://postimg.cc/cvZWxMRw)
 
-## สรุปการทำงานของโปรเจคต์
-โปรเจคต์นี้ สรุปได้ว่า เราใช้ Smart contract ที่เขียนโดยภาษา Solidity ซึ่งเรา deploy บนบล็อกเชนส่วนบุคคล Ganache ไปเชื่อมต่อกับ Front-end และ back-end บน visual studio code เพื่อให้แสดงผลออกมาเป็นเว็บไซต์จองสิทธิ์ประมูล ซึ่งจะมีไฟล์ที่สำคัญดังต่อไปนี้ 
+## ภาพรวมการทำงานของ Dapp
+Dapp นี้ สรุปได้ว่า เราใช้ Smart contract ที่เขียนโดยภาษา Solidity ซึ่งเรา deploy บนบล็อกเชนส่วนบุคคล Ganache ไปเชื่อมต่อกับ Front-end และ back-end บน visual studio code เพื่อให้แสดงผลออกมาเป็นเว็บไซต์จองสิทธิ์ประมูล ซึ่งจะมีไฟล์ที่สำคัญดังต่อไปนี้ 
 
   **1.Booking.sol**
   
@@ -16,7 +18,7 @@
 ## 1. สร้าง Smart Contract
 ### 1.1. Booking Smart Contract
 
-ที่ Visual Studio Code ให้นำเคอร์เซอร์วางเหนือโฟลเดอร์ ```contracts``` แล้วคลิกขวาไปที่ ```New file``` และสร้างไฟล์ชื่อ ```Booking.sol``` โดยมีโค้ดดังนี้
+สร้าง Smart contract โดยเปิด Visual Studio Code ให้นำเคอร์เซอร์วางเหนือโฟลเดอร์ ```contracts``` แล้วคลิกขวาไปที่ ```New file``` และสร้างไฟล์ชื่อ ```Booking.sol``` โดยมีโค้ดดังนี้
 
 ```
 //"SPDX-License-Identifier:MIT"

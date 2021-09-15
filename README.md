@@ -147,17 +147,25 @@ Summary
 [![1.png](https://i.postimg.cc/GpnG9Y1m/1.png)](https://postimg.cc/ZWjCMWRG)
 [![2.png](https://i.postimg.cc/gjj61H3N/2.png)](https://postimg.cc/MfkTQRPQ)
 
-รูปลักษณ์ตามที่เห็นนี้เป็นการแก้ไขไฟล์```index.html``` , ```app.js``` และ ```Kids.json``` โดยเริ่มที่ **front end** คือไฟล์ ```index.html```ให้เปิด **Visual Studio Code** ไปที่ ```src/index.html``` โดยให้มีโค้ด ดังนี้ 
+รูปลักษณ์ตามที่เห็นนี้เป็นการแก้ไขไฟล์```index.html``` , ```app.js``` และ ```Nfts.json``` โดยเริ่มที่ **front end** คือไฟล์ ```index.html```ให้เปิด **Visual Studio Code** ไปที่ ```src/index.html``` โดยให้มีโค้ด ดังนี้ 
 
 ```<!DOCTYPE html>
 <html lang="en">
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <!-- Include all compiled plugins (below), or include individual files as needed -->
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/web3.min.js"></script>
+     <script src="js/truffle-contract.js"></script>
+     <script src="js/app.js"></script>
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>มูลนิธิศูนย์เด็กกำพร้าชาลีมิตร</title>
-    
+    <title>NFTs paradise</title>
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -168,7 +176,7 @@ Summary
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body background="https://www.muralswallpaper.co.uk/app/uploads/watercolour-polka-dot-room-825x535.jpg">
+  <body background="https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png">
     
     <div class="container">
       <div class="row">
@@ -181,45 +189,41 @@ Summary
                 border-style: double; 
                 background-color: white;" 
           class="text-center">
-            <b>มูลนิธิศูนย์เด็กกำพร้าชาลีมิตร</b></h1>
+            <b>NFTs Paradise</b></h1>
           <hr/>
           <p style="font-size: 30px; 
           color: rgb(70, 121, 12);
           font-family: Verdana, Geneva, Tahoma, sans-serif;
           border: 10px rgb(218, 4, 4); 
-          background-color: white;" >เบอร์ติดต่อ : 02-657-3741</p>
+          background-color: white;" >Reserve Your Chance Now!</p>
         </div>
       </div>
-      <div id="kidsRow" class="row">
-        <!-- KIDS LOAD HERE -->
+      <div id="nftsRow" class="row">
+        <!-- NFTs LOAD HERE -->
       </div>
     </div>
 
-    <div id="kidTemplate" style="display: none;">
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="panel panel-default panel-pet">
+   <center> <div id="NftsTemplate" style="display:none;">
+      <div class="col-sm-4 col-md-4 col-lg-3">
+        <div class="panel panel-default panel-nft">
           <div class="panel-heading">
-            <h2 class="panel-title"><b>Scrappy</b></h2>
+      
+              </script>
+            <h3 class="panel-title"><center>Brand</center></h3>
           </div>
           <div class="panel-body">
-            <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 100%;" src="https://animalso.com/wp-content/uploads/2017/01/Golden-Retriever_6.jpg" data-holder-rendered="true">
+            <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 100%;" src="http://localhost:3000/images/Altis.jpeg" data-holder-rendered="true">
             <br/><br/>
-            <strong>เชื้อชาติ</strong>: <span class="pet-breed">Golden Retriever</span><br/>
-            <strong>อายุ</strong>: <span class="pet-age">3</span><br/>
-            <strong>ที่อยู่ศูนย์กำพร้า</strong>: <span class="pet-location">Warren, MI</span><br/><br/>
-            <button class="btn btn-default btn-adopt" type="button" data-id="0">รับอุปการะ</button>
+            <strong>ชื่อศิลปิน</strong>: <span class="nft-Maker">X</span><br/>
+            <strong>ราคาเริ่มต้น</strong>: <span class="nft-Start">1</span><br/>
+            <strong>วันประมูล</strong>: <span class="nft-Date">D - D</span><br/><br/>
+            <center><button class="btn btn-default btn-Reserve" type="button" data-id="0">ร่วมประมูล</button></center>
           </div>
         </div>
       </div>
-    </div>
+    </div></center>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/web3.min.js"></script>
-    <script src="js/truffle-contract.js"></script>
-    <script src="js/app.js"></script>
+ 
   </body>
 </html>
 ```
@@ -240,20 +244,20 @@ App = {
   contracts: {},
 
   init: async function() {
-    // Load pets.
-    $.getJSON('../Kids.json', function(data) {
-      var kidsRow = $('#kidsRow');
-      var kidTemplate = $('#kidTemplate');
+    // Load Nfts.
+    $.getJSON('../Nfts.json', function(data) {
+      var nftsRow = $('#nftsRow');
+      var NftsTemplate = $('#NftsTemplate');
 
       for (i = 0; i < data.length; i ++) {
-        kidTemplate.find('.panel-title').text(data[i].name);
-        kidTemplate.find('img').attr('src', data[i].picture);
-        kidTemplate.find('.pet-breed').text(data[i].Nationality);
-        kidTemplate.find('.pet-age').text(data[i].age);
-        kidTemplate.find('.pet-location').text(data[i].location);
-        kidTemplate.find('.btn-adopt').attr('data-id', data[i].id);
+        NftsTemplate.find('.panel-title').text(data[i].name);
+        NftsTemplate.find('img').attr('src', data[i].picture);
+        NftsTemplate.find('.nft-Start').text(data[i].ราคาเริ่มต้น);
+        NftsTemplate.find('.nft-Maker').text(data[i].ชื่อศิลปิน);
+        NftsTemplate.find('.nft-Date').text(data[i].วันประมูล);
+        NftsTemplate.find('.btn-Reserve').attr('data-id', data[i].id);
 
-        kidsRow.append(kidTemplate.html());
+        nftsRow.append(NftsTemplate.html());
       }
     });
 
@@ -286,35 +290,35 @@ App = {
   },
 
   initContract: function() {
-    $.getJSON('Adoption.json', function (data) {
+    $.getJSON('Booking.json', function (data) {
       // Get the necessary contract artifact file and instantiate it with @truffle/contract
-      var AdoptionArtifact = data;
-      App.contracts.Adoption = TruffleContract(AdoptionArtifact);
+      var BookingArtifact = data;
+      App.contracts.Booking = TruffleContract(BookingArtifact);
 
       // Set the provider for our contract
-      App.contracts.Adoption.setProvider(App.web3Provider);
+      App.contracts.Booking.setProvider(App.web3Provider);
 
-      // Use our contract to retrieve and mark the adopted pets
-      return App.markAdopted();
+      // Use our contract to retrieve and mark the Reserved nfts
+      return App.markReserved();
     });
     return App.bindEvents();
   },
 
   bindEvents: function() {
-    $(document).on('click', '.btn-adopt', App.handleAdopt);
+    $(document).on('click', '.btn-Reserve', App.handleReserve);
   },
 
-  markAdopted: function() {
-    var adoptionInstance;
+  markReserved: function() {
+    var BookingInstance;
 
-    App.contracts.Adoption.deployed().then(function (instance) {
-      adoptionInstance = instance;
+    App.contracts.Booking.deployed().then(function (instance) {
+      BookingInstance = instance;
 
-      return adoptionInstance.getAdopters.call();
-    }).then(function (adopters) {
-      for (i = 0; i < adopters.length; i++) {
-        if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-          $('.panel-pet').eq(i).find('button').text("อุปการะแล้ว").attr('disabled', true);
+      return BookingInstance.getBookers.call();
+    }).then(function (Bookers) {
+      for (i = 0; i < Bookers.length; i++) {
+        if (Bookers[i] !== '0x0000000000000000000000000000000000000000') {
+          $('.panel-nft').eq(i).find('button').text('Reserved').attr('disabled', true);
         }
       }
     }).catch(function (err) {
@@ -322,12 +326,12 @@ App = {
     });
   },
 
-  handleAdopt: function(event) {
+  handleReserve: function(event) {
     event.preventDefault();
 
-    var kidId = parseInt($(event.target).data('id'));
+    var nftID = parseInt($(event.target).data('id'));
 
-    var adoptionInstance;
+    var BookingInstance;
 
     web3.eth.getAccounts(function (error, accounts) {
       if (error) {
@@ -336,13 +340,13 @@ App = {
 
       var account = accounts[0];
 
-      App.contracts.Adoption.deployed().then(function (instance) {
-        adoptionInstance = instance;
+      App.contracts.Booking.deployed().then(function (instance) {
+        BookingInstance = instance;
 
-        // Execute adopt as a transaction by sending account
-        return adoptionInstance.adopt(kidId, { from: account });
+        // Execute Reserve as a transaction by sending account
+        return BookingInstance.Reserve(nftID, { from: account });
       }).then(function (result) {
-        return App.markAdopted();
+        return App.markReserved();
       }).catch(function (err) {
         console.log(err.message);
       });
@@ -355,7 +359,7 @@ $(function() {
   $(window).load(function() {
     App.init();
   });
-});
+})
 
 
 ```

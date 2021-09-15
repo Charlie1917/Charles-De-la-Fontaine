@@ -368,7 +368,7 @@ $(function() {
 
 **บรรทัดที่ 26-46** เป็นการระบุว่าจะใช้ web3 (บล็อกเชน) แบบใดในการเชื่อมต่อกับ smart contract โดยเริ่มจาก Metamask ,Legacy browser และ Ganache ตามลำดับ หากต้องการใช้เฉพาะอันใดอันหนึ่งก็ให้ทำการ comment บรรทัดที่เหลือ  
 
-[![appjs3.png](https://i.postimg.cc/CM7Yr7Rx/appjs3.png)](https://postimg.cc/dDhzL8Rb)
+[![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-45-PM.png](https://i.postimg.cc/P5P8HD8k/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-45-PM.png)](https://postimg.cc/0z1Ndbft)
 
 **บรรทัดที่ 70-84**  เป็นการดึงเอา smart contract มาใช้ โดยสั่งการให้โปรแกรมเชื่อม wallet address เมื่อมีการกดปุ่ม "รับอุปการะ" Metamask/Ganache จะทำการคิดค่า gas ทันที และ frond end จะแสดงผลโดยเปลี่ยนปุ่ม "รับอุปการะ" เป็น "อุปการะแล้ว" เพื่อให้ผู้ใจบุญท่านอื่นทราบ และเลือกเด็กที่เหลือต่อไป
 โดย **บรรทัดที่ 70** ประกาศฟังก์ชั่น ```markAdopted``` **บรรทัดที่ 71** ประกาศตัวแปร  ```adoptionInstance```  
@@ -378,7 +378,8 @@ $(function() {
 **บรรทัดที่ 76-77** เมื่อ function ```getAdopters``` ทำงานแล้ว ให้นำพารามิเตอร์ที่ได้ไปให้กับ function ```adopters``` ซึ่งจะทำงานต่อใน**บรรทัดที่ 78-80**   
 **บรรทัดที่ 78-80**  เป็น function ```For loop``` ซึ่งนำเอาข้อมูลเด็กทั้ง 16 จากบล็อกเชนมาเชื่อมต่อกับ back end คือ ```app.js```  แปลความได้ว่า **เมื่อมีผู้อุปการะแล้วให้เปลี่ยนปุ่ม "รับอุปการะ" เป็น "อุปการะแล้ว"** ซึ่งก่อนจะจบ function ```markAdopted``` ให้ย้อนไปทำ function  ```bindEvents``` ใน**บรรทัดที่ 66** ก่อน 
 
-[![appjs4.png](https://i.postimg.cc/RFmf2Xyk/appjs4.png)](https://postimg.cc/06tbwd8n)
+[![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-59-PM.png](https://i.postimg.cc/MZ5cj57S/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-59-PM.png)](https://postimg.cc/Lhq4czQC)
+[![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-12-14-PM.png](https://i.postimg.cc/BnKQNBKt/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-12-14-PM.png)](https://postimg.cc/bZqhwbLj)
 
 จาก function  ```bindEvents``` ใน**บรรทัดที่ 66** เป็นการสั่งว่า เมื่อมีการคลิกที่ ```btn-adopt``` ซึ่งก็คือปุ่ม **"รับอุปการะ"** ให้ไปทำ function  ```handleAdopt ``` ใน**บรรทัดที่ 88**  
 **บรรทัดที่ 89** หมายถึง function นี้ เราไม่ต้อง submit ลงไปในแอพพลิเคชั่น (ในเว็บนี้) ,เราต้องการที่จะจัดการ ( handle)  ด้วยตัวเอง  

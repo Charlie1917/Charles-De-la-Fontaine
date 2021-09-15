@@ -370,6 +370,8 @@ $(function() {
 
 [![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-45-PM.png](https://i.postimg.cc/P5P8HD8k/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-45-PM.png)](https://postimg.cc/0z1Ndbft)
 
+[![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-59-PM.png](https://i.postimg.cc/MZ5cj57S/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-59-PM.png)](https://postimg.cc/Lhq4czQC)
+
 **บรรทัดที่ 70-84**  เป็นการดึงเอา smart contract มาใช้ โดยสั่งการให้โปรแกรมเชื่อม wallet address เมื่อมีการกดปุ่ม "รับอุปการะ" Metamask/Ganache จะทำการคิดค่า gas ทันที และ frond end จะแสดงผลโดยเปลี่ยนปุ่ม "รับอุปการะ" เป็น "อุปการะแล้ว" เพื่อให้ผู้ใจบุญท่านอื่นทราบ และเลือกเด็กที่เหลือต่อไป
 โดย **บรรทัดที่ 70** ประกาศฟังก์ชั่น ```markAdopted``` **บรรทัดที่ 71** ประกาศตัวแปร  ```adoptionInstance```  
 
@@ -377,14 +379,11 @@ $(function() {
 
 **บรรทัดที่ 76-77** เมื่อ function ```getAdopters``` ทำงานแล้ว ให้นำพารามิเตอร์ที่ได้ไปให้กับ function ```adopters``` ซึ่งจะทำงานต่อใน**บรรทัดที่ 78-80**   
 **บรรทัดที่ 78-80**  เป็น function ```For loop``` ซึ่งนำเอาข้อมูลเด็กทั้ง 16 จากบล็อกเชนมาเชื่อมต่อกับ back end คือ ```app.js```  แปลความได้ว่า **เมื่อมีผู้อุปการะแล้วให้เปลี่ยนปุ่ม "รับอุปการะ" เป็น "อุปการะแล้ว"** ซึ่งก่อนจะจบ function ```markAdopted``` ให้ย้อนไปทำ function  ```bindEvents``` ใน**บรรทัดที่ 66** ก่อน 
-
-[![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-59-PM.png](https://i.postimg.cc/MZ5cj57S/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-59-PM.png)](https://postimg.cc/Lhq4czQC)
-[![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-12-14-PM.png](https://i.postimg.cc/BnKQNBKt/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-12-14-PM.png)](https://postimg.cc/bZqhwbLj)
-
+[![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-45-PM.png](https://i.postimg.cc/P5P8HD8k/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-45-PM.png)](https://postimg.cc/0z1Ndbft)
 จาก function  ```bindEvents``` ใน**บรรทัดที่ 66** เป็นการสั่งว่า เมื่อมีการคลิกที่ ```btn-adopt``` ซึ่งก็คือปุ่ม **"รับอุปการะ"** ให้ไปทำ function  ```handleAdopt ``` ใน**บรรทัดที่ 88**  
 **บรรทัดที่ 89** หมายถึง function นี้ เราไม่ต้อง submit ลงไปในแอพพลิเคชั่น (ในเว็บนี้) ,เราต้องการที่จะจัดการ ( handle)  ด้วยตัวเอง  
 **บรรทัดที่ 95-97** เป็นการอ่านค่า account บน web3 ( Ganache) หากอ่านค่าไม่ได้ให้แสดงผล error ออกมาทาง console 
-
+[![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-12-14-PM.png](https://i.postimg.cc/BnKQNBKt/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-12-14-PM.png)](https://postimg.cc/bZqhwbLj)
 **บรรทัดที่ 100-103** เป็นการประกาศตัวแปรชื่อ ```account```  ให้มีค่าเริ่มต้นเป็น account เบอร์ 0 จากนั้นให้ทำ function เช่นเดียวกับ **บรรทัดที่ 73-74** 
 **บรรทัดที่ 106-108** เป็นการให้ ```adoptionInstance``` ซึ่งตอนนี้มีค่าเท่ากับ ```Adoption.sol``` อ่านค่า function ```adopt``` ตามด้วย ```kidId``` ตามด้วย ```account``` จะได้ค่า ```kidId``` ออกมา ให้นำไปไว้ใน function ```result``` (ซึ่งค่าใน result หลังจากนี้ ไม่ได้ใช้ทำอะไรต่อ) จากนั้นให้วนไปทำ function ```markAdopted``` ใน**บรรทัดที่ 70-84** ตามที่ได้กล่าวมาแล้ว  
 

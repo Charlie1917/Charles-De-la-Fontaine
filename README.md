@@ -72,7 +72,7 @@ module.exports = function(deployer) {
 ```
 truffle migrate
 ```
-หาก **migrate** ผ่าน จะปรากฎข้อความลักษณะดังกล่าว ซึ่งเป็นการอ่าน ไฟล์ ```Adoption.sol,1_initial_migration.js``` และ ```2_deploy_contracts.js```ซึ่งระบบจะนำข้อมูลไปไว้บนบล็อคเชน และคำนวณค่า gas ซึ่งมีหน่วยเป็น _**Wei**_ ,_**Gwei**_ และ _**Ether**_ ตามลำดับ
+หาก **migrate** ผ่าน จะปรากฎข้อความลักษณะดังกล่าว ซึ่งเป็นการอ่าน ไฟล์ ```Booking.sol,1_initial_migration.js``` และ ```2_deploy_contracts.js```ซึ่งระบบจะนำข้อมูลไปไว้บนบล็อคเชน และคำนวณค่า gas ซึ่งมีหน่วยเป็น _**Wei**_ ,_**Gwei**_ และ _**Ether**_ ตามลำดับ
 
 ```
 Compiling your contracts...
@@ -114,7 +114,7 @@ Starting migrations...
 2_deploy_contracts.js
 =====================
 
-   Deploying 'Adoption'
+   Deploying 'Booking'
    --------------------
    > transaction hash:    0x5fd4693613601e09253f91a33fd5abe31bc469f2f7a00360c87be5854d00caa4   > Blocks: 0            Seconds: 0
    > contract address:    0xA7621957B4A66C341a56Fd82b5f1eA93EC9859D1
@@ -138,73 +138,8 @@ Summary
 =======
 > Total deployments:   2
 > Final cost:          0.0079154 ETH
-```
-### 2.4 ทดสอบ Smart Contract
----------
-ไปที่ **Visual Studio Code** โดยนำเคอร์เซอร์ไปวางเหนือโฟลเดอร์ ```contracts ``` แล้วคลิกขวาไปที่ ```New file```แล้วสร้างไฟล์ชื่อ ```TestAdoption.sol``` โดยมีโค้ดดังนี้ 
 
 ```
-pragma solidity ^0.5.16;
-
-import "truffle/Assert.sol";
-import "truffle/DeployedAddresses.sol";
-import "../contracts/Adoption.sol";
-
-contract TestAdoption {
-  // The address of the adoption contract to be tested
-  Adoption adoption = Adoption(DeployedAddresses.Adoption());
-
-  // The id of the kid that will be used for testing
-  uint expectedKidId = 8;
-
-  //The expected Foster parent of adopted kid is this contract
-  address expectedAdopter = address(this);
-
-  function testUserCanAdoptKid() public {
-    uint returnedId = adoption.adopt(expectedKidId);
-    Assert.equal(returnedId, expectedKidId, "Adoption of the expected kid should match what is returned.");
-  }
-
-  function testGetAdopterAddressByKidId() public {
-    address adopter = adoption.adopters(expectedKidId);
-    Assert.equal(adopter, expectedAdopter, "Foster parent of the expected Kid should be this contract");
-  }
-
-  // Testing retrieval of all kid Foster parents
-  function testGetAdopterAddressByKidIdInArray() public {
-    // Store adopters in memory rather than contract's storage
-    address[16] memory adopters = adoption.getAdopters();
-    Assert.equal(adopters[expectedKidId], expectedAdopter, "Foster parent of the expected Kid should be this contract");
-  }
-}
-```
-
-รันการทดสอบโค้ดด้านบน โดยใช้คำสั่งใน terminal ต่อไปนี้
-
-```
-truffle test
-```
-
-ที่หน้าจอของ Terminal จะขึ้นข้อความตามด้านล่าง หรือคล้ายกัน
-
-```
- PS C:\Users\Account\pet-shop> truffle test
-Using network 'development'.
-
-
-Compiling your contracts...
-===========================
-> Compiling .\contracts\Adoption.sol
-> Compiling .\contracts\TestAdoption.sol
-> Artifacts written to C:\Users\Account\AppData\Local\Temp\test--44844-yY4cgjNa3zlN
-> Compiled successfully using:
-   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
-
-
-
-  0 passing (0ms)
-```
-
 
 ## 3.รูปแบบเว็บไซต์ ( User Interface :UI) ซึ่งเป็น front end เพื่อใช้เชื่อมต่อกับผู้ใช้
 รูปลักษณ์ของเว็บแอพพลิเคชั่นที่ออกแบบมีลักษณะ ดังนี้ 

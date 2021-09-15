@@ -47,34 +47,25 @@ contract Booking {
 truffle compile
 ```
 
-ให้ตรวจสอบว่า สามารถคอมไพล์ได้สำเร็จหรือไม่ โดยจะมีข้อความเช่นนี้หรือคล้ายกัน ปรากฎขึ้นมา
+โดยจะมีข้อความเช่นนี้หรือคล้ายกัน ปรากฎขึ้นมา
 
-[![compile.png](https://i.postimg.cc/nz07LhxR/compile.png)](https://postimg.cc/0MKrWxbD)
 [![booking-sol-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-4-34-05-PM.png](https://i.postimg.cc/L5YBbPTv/booking-sol-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-4-34-05-PM.png)](https://postimg.cc/rRTrdK7t)
 
 จากนั้นใน **Visual Studio Code** ให้นำเคอร์เซอร์วางเหนือโฟลเดอร์ ```migrations``` แล้วคลิกขวาไปที่ ```New file``` แล้วสร้างไฟล์ชื่อ ```2_deploy_contracts.js``` แล้วเขียนโค้ดดังนี้
 
 ```
-var Adoption = artifacts.require("Adoption");
+var Booking = artifacts.require("Booking");
 
 module.exports = function(deployer) {
-  deployer.deploy(Adoption);
+  deployer.deploy(Booking);
 };
 ```
-ดาวน์โหลด **Ganache** จาก [Ganache](https://www.trufflesuite.com/ganache) เมื่อดาวน์โหลดแล้วใช้เมาส์ดับเบิลคลิกที่ชื่อไฟล์ 
 
-[![ganache1.png](https://i.postimg.cc/bvqfzCdY/ganache1.png)](https://postimg.cc/pmc6CBD3)
-
-คลิกที่  ```New Workspace```เพื่อตั้งชื่อ ในที่นี้จะตั้งชื่อตามวิชาคือ NF507 จากนั้นคลิก ```Save Workspace```
-
-[![ganache2.png](https://i.postimg.cc/Y91XhkPJ/ganache2.png)](https://postimg.cc/zbGwQm8j)
-
-
-จะปรากฎ การแสดง account บน ganache ต่างๆ ตามภาพ
+จากนั้นเปิด Ganache ขึ้นมา จะปรากฎ การแสดง account บน ganache ต่างๆ ตามภาพ
 
 [![ganache3.png](https://i.postimg.cc/85V489Cw/ganache3.png)](https://postimg.cc/f3BmmHm0)
 
-### 2.3 Migrate
+### 1.3 Migrate
 ---------
 ในขั้นตอนต่อไปให้ทำการ **migrate** Smart contract ไปอยู่บน _**personal blockchain**_ ซึ่งในที่นี้คือ **ganache** ทำได้โดยใช้คำสั่งใน **terminal** ดังต่อไปนี้
 

@@ -231,8 +231,11 @@ Summary
   </body>
 </html>
 ```
+[![index-html-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-10-45-26-PM.png](https://i.postimg.cc/cC4Twg1W/index-html-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-10-45-26-PM.png)](https://postimg.cc/TLFrXPWN)
 
-จากโค้ด **บรรทัดที่ 20-47**  เป็นการปรับแต่งพื้นหลัง สร้างกรอบข้อความรอบชื่อแอพพลิเคชั่น และใช้สีของตัวหนังสือที่ต่างๆ กันไป 
+จากโค้ด **บรรทัดที่ 1-48**  เป็นการปรับแต่งพื้นหลัง สร้างกรอบข้อความรอบชื่อแอพพลิเคชั่น และใช้สีของตัวหนังสือที่ต่างๆ กันไป 
+
+[![index-html-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-10-45-58-PM.png](https://i.postimg.cc/pLD8VVxJ/index-html-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-10-45-58-PM.png)](https://postimg.cc/cvL6XSvv)
 
 ส่วนโค้ด**บรรทัดที่ 55-69** เดิมเป็นการสร้างเทมเพลตเบื้องต้นจากต้นฉบับ(แสดงข้อมูลของเว็บไซต์รถยนต์ )ในที่นี้เราดัดแปลงมาเป็นการจอง Nft  โดยเปลี่ยนข้อความเป็นภาษาไทยตามภาพ ทั้งหัวข้อ ศิลปิน ราคาเริ่มต้น วันเริ่มประมูล และชื่อปุ่มกด
 

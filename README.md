@@ -381,6 +381,7 @@ $(function() {
 **บรรทัดที่ 78-80**  เป็น function ```For loop``` ซึ่งนำเอาข้อมูลเด็กทั้ง 16 จากบล็อกเชนมาเชื่อมต่อกับ back end คือ ```app.js```  แปลความได้ว่า **เมื่อมีผู้อุปการะแล้วให้เปลี่ยนปุ่ม "รับอุปการะ" เป็น "อุปการะแล้ว"** ซึ่งก่อนจะจบ function ```markAdopted``` ให้ย้อนไปทำ function  ```bindEvents``` ใน**บรรทัดที่ 66** ก่อน 
 [![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-45-PM.png](https://i.postimg.cc/P5P8HD8k/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-45-PM.png)](https://postimg.cc/0z1Ndbft)
 จาก function  ```bindEvents``` ใน**บรรทัดที่ 66** เป็นการสั่งว่า เมื่อมีการคลิกที่ ```btn-adopt``` ซึ่งก็คือปุ่ม **"รับอุปการะ"** ให้ไปทำ function  ```handleAdopt ``` ใน**บรรทัดที่ 88**  
+[![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-59-PM.png](https://i.postimg.cc/MZ5cj57S/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-11-59-PM.png)](https://postimg.cc/Lhq4czQC)
 **บรรทัดที่ 89** หมายถึง function นี้ เราไม่ต้อง submit ลงไปในแอพพลิเคชั่น (ในเว็บนี้) ,เราต้องการที่จะจัดการ ( handle)  ด้วยตัวเอง  
 **บรรทัดที่ 95-97** เป็นการอ่านค่า account บน web3 ( Ganache) หากอ่านค่าไม่ได้ให้แสดงผล error ออกมาทาง console 
 [![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-12-14-PM.png](https://i.postimg.cc/BnKQNBKt/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-12-14-PM.png)](https://postimg.cc/bZqhwbLj)

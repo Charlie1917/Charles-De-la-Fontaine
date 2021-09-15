@@ -151,7 +151,7 @@ Summary
 รูปลักษณ์ของเว็บแอพพลิเคชั่นที่ออกแบบมีลักษณะ ดังนี้ 
 [![NFTs-paradise-Google-Chrome-9-15-2021-4-49-54-PM.png](https://i.postimg.cc/L4tGKLgy/NFTs-paradise-Google-Chrome-9-15-2021-4-49-54-PM.png)](https://postimg.cc/nML3qsk7)
 
-รูปลักษณ์ตามที่เห็นนี้เป็นการสร้างไฟล์```index.html``` , ```app.js``` และ ```Nfts.json``` โดยเริ่มที่ **front end** คือไฟล์ ```index.html```ให้เปิด **Visual Studio Code** ไปที่ ```src/index.html``` โดยให้มีโค้ด ดังนี้ 
+รูปลักษณ์ตามที่เห็นนี้เป็นการสร้างไฟล์```index.html``` , ```app.js``` และ ```Nfts.json``` โดยเริ่มที่ **front end** คือไฟล์ ```index.html```ให้เปิด **Visual Studio Code**  สร้างไฟล์ใน ```src/index.html``` โดยให้มีโค้ด ดังนี
 
 ```<!DOCTYPE html>
 <html lang="en">
@@ -240,7 +240,7 @@ Summary
 ส่วนโค้ด**บรรทัดที่ 55-69** เดิมเป็นการสร้างเทมเพลตเบื้องต้นจากต้นฉบับ(แสดงข้อมูลของเว็บไซต์รถยนต์ )ในที่นี้เราดัดแปลงมาเป็นการจอง Nft  โดยเปลี่ยนข้อความเป็นภาษาไทยตามภาพ ทั้งหัวข้อ ศิลปิน ราคาเริ่มต้น วันเริ่มประมูล และชื่อปุ่มกด
 
 ## 3. สร้าง Backend ที่สามารถเชื่อมต่อกับ Smart Contract
-#### 3.1 ให้สร้างไฟล์ ```src/js/app.js``` ใน visual studio code ให้มีโค้ดดังนี้
+#### 3.1 สร้างไฟล์ ```src/js/app.js``` ใน visual studio code ให้มีโค้ดดังนี้
 
 ```
 App = {
@@ -373,7 +373,7 @@ $(function() {
 
 [![26-48.png](https://i.postimg.cc/yNp183mF/26-48.png)](https://postimg.cc/7C78B6Q6)
 
-**บรรทัดที่ 26-46** เป็นการระบุว่าจะใช้ web3 (บล็อกเชน) แบบใดในการเชื่อมต่อกับ smart contract โดยเริ่มจาก Metamask ,Legacy browser และ Ganache ตามลำดับ หากต้องการใช้เฉพาะอันใดอันหนึ่งก็ให้ทำการ comment บรรทัดที่เหลือ  
+**บรรทัดที่ 26-46** เป็นการระบุว่าจะใช้ web3 (บล็อกเชน) แบบใดในการเชื่อมต่อกับ smart contract โดยเริ่มจาก Metamask ,Legacy browser และ Ganache ตามลำดับ 
 
 [![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-45-26-PM.png](https://i.postimg.cc/0jSKm1P2/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-45-26-PM.png)](https://postimg.cc/hQSGWwXH)
 

@@ -523,33 +523,8 @@ $(function() {
     }
   ]
   ```
-## 5. ติดตั้ง MetaMask
-- ดาวน์โหลดและติดตั้ง **MetaMask** ที่  [Metamask](https://metamask.io/)
-- เมื่อเริ่มใช้งาน **MetaMask** จะเข้าสู่หน้าแรก ตามภาพ 
 
-[![metamask-01.png](https://i.postimg.cc/gJr5Jfpp/metamask-01.png)](https://postimg.cc/0MRZXXrX)
-
-- คลิกที่ ```Get Started``` จะได้ผลลัพธ์ดังรูปด้านล่าง  - สำหรับผู้ที่ยังไม่ได้สมัครมาก่อนให้กด ```Create wallet```  สำหรับผู้ที่มีบัญชีอยู่แล้วให้คลิกที่  ```Import Wallet``` เพื่อเชื่อมต่อ MetaMask เข้ากับ Wallet ของ Ganache
-
-[![metamask-02.png](https://i.postimg.cc/BQWKmHXc/metamask-02.png)](https://postimg.cc/jCX25W6L)
-
-- ทำการก็อปปี้ Seed จาก Ganache นำมาวางลงในช่อง Wallet Seed จากนั้นตั้งพาสเวิร์ด แล้วติ๊กที่```I have read and agree to the Terms of Use```แล้วคลิก ```Import```
-
-[![Seed.png](https://i.postimg.cc/sX9tbp3Q/Seed.png)](https://postimg.cc/47yL9H7s)
-[![metamask-03.png](https://i.postimg.cc/SNyM0qfJ/metamask-03.png)](https://postimg.cc/c6bHYpjS)
-
-- ทำการย้ายจาก ```Ethereum Mainnet``` มาที่ ```Ganache```โดยคลิกที่ ```Ethereum Mainnet```แล้วเลือก ```Custom RPC```
-
-[![metamask-04.png](https://i.postimg.cc/jjgbjHGp/metamask-04.png)](https://postimg.cc/McQ4PQZ5)
-
-- กรอกข้อมูล ```Network Name``` เป็น ```Ganache```เพื่อให้จำง่าย สำหรับ ```New RPC URL``` ต้องเป็น URL ของ Ganache ซึ่งในที่นี้คือ ```http://127.0.0.1:7545``` 
-- สำหรับการตั้งค่าอื่นๆ ให้ดูตามภาพ
-
-[![metamask-05.png](https://i.postimg.cc/FR3D6mgT/metamask-05.png)](https://postimg.cc/qhBstPFK)
-
-
-
-## 6. การทำงานของโปรแกรม 
+## 5. การทำงานของโปรแกรม 
 
 ให้รันโปรแกรม โดยใช้คำสั่งใน terminal ดังนี้ 
 

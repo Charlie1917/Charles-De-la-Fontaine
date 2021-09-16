@@ -11,7 +11,7 @@
 ## ภาพรวมการทำงานของ Dapp
 Dapp นี้ สรุปได้ว่า เราใช้ Smart contract ที่เขียนโดยภาษา Solidity ซึ่งเรา deploy บนบล็อกเชนส่วนบุคคล Ganache ไปเชื่อมต่อกับ Front-end และ back-end บน visual studio code เพื่อให้แสดงผลออกมาเป็นเว็บไซต์จองสิทธิ์ประมูล ซึ่งจะมีไฟล์ที่สำคัญดังต่อไปนี้ 
 
-  **1.Booking.sol**
+  **1.booking.sol**
   
   **2.index.html**
   
@@ -22,7 +22,7 @@ Dapp นี้ สรุปได้ว่า เราใช้ Smart contract 
 ## 1. สร้าง Smart Contract
 ### 1.1. Booking Smart Contract
 
-สร้าง Smart contract โดยเปิด Visual Studio Code ให้นำเคอร์เซอร์วางเหนือโฟลเดอร์ ```contracts``` แล้วคลิกขวาไปที่ ```New file``` และสร้างไฟล์ชื่อ ```Booking.sol``` โดยมีโค้ดดังนี้
+สร้าง Smart contract โดยเปิด Visual Studio Code ให้นำเคอร์เซอร์วางเหนือโฟลเดอร์ ```contracts``` แล้วคลิกขวาไปที่ ```New file``` และสร้างไฟล์ชื่อ ```booking.sol``` โดยมีโค้ดดังนี้
 
 ```
 //"SPDX-License-Identifier:MIT"

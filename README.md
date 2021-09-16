@@ -67,7 +67,7 @@ module.exports = function(deployer) {
 };
 ```
 
-จากนั้นเปิด Ganache ขึ้นมา จะปรากฎ การแสดง account บน ganache ต่างๆ ตามภาพ
+จากนั้นเปิด Ganache ขึ้นมา จะปรากฎ การแสดง account  ต่างๆ บน ganache ตามภาพ
 
 [![ganache3.png](https://i.postimg.cc/85V489Cw/ganache3.png)](https://postimg.cc/f3BmmHm0)
 

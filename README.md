@@ -1,6 +1,6 @@
-   # "NFTs paradise"
+   # "NFTs Paradise"
  
-   NFTs paradise เป็น Dapp แบบเว็บแอพพลิเคชั่น ในการจองสิทธิ์ที่จะเข้าร่วมประมูล NFTs ไฟล์เพลงและภาพ  ของศิลปินชื่อดังทั้งไทยและต่างประเทศ ซึ่งในที่นี้มี 16 ชิ้น 
+   NFTs Paradise เป็น Dapp แบบเว็บแอพพลิเคชั่น ในการจองสิทธิ์ที่จะเข้าร่วมประมูล NFTs ไฟล์เพลงและภาพ  ของศิลปินชื่อดังทั้งไทยและต่างประเทศ ซึ่งในที่นี้มี 16 ชิ้น 
    
    [![NFTs-paradise-Google-Chrome-9-15-2021-4-49-54-PM.png](https://i.postimg.cc/L4tGKLgy/NFTs-paradise-Google-Chrome-9-15-2021-4-49-54-PM.png)](https://postimg.cc/nML3qsk7)
    

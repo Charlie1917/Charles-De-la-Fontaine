@@ -78,7 +78,7 @@ module.exports = function(deployer) {
 ```
 truffle migrate
 ```
-หาก **migrate** ผ่าน จะปรากฎข้อความลักษณะดังกล่าว ซึ่งเป็นการอ่าน ไฟล์ ```Booking.sol,1_initial_migration.js``` และ ```2_deploy_contracts.js```ซึ่งระบบจะนำข้อมูลไปไว้บนบล็อคเชน และคำนวณค่า gas ซึ่งมีหน่วยเป็น _**Wei**_ ,_**Gwei**_ และ _**Ether**_ ตามลำดับ
+หาก **migrate** ผ่าน จะปรากฎข้อความลักษณะดังกล่าว ซึ่งเป็นการอ่าน ไฟล์ ```booking.sol,1_initial_migration.js``` และ ```2_deploy_contracts.js```ซึ่งระบบจะนำข้อมูลไปไว้บนบล็อคเชน และคำนวณค่า gas ซึ่งมีหน่วยเป็น _**Wei**_ ,_**Gwei**_ และ _**Ether**_ ตามลำดับ
 
 ```
 Compiling your contracts...
@@ -380,7 +380,7 @@ $(function() {
 **บรรทัดที่ 70-84**  เป็นการดึงเอา smart contract มาใช้ โดยสั่งการให้โปรแกรมเชื่อม wallet address เมื่อมีการกดปุ่ม "ร่วมประมูล" Ganache จะทำการคิดค่า gas ทันที และ front end จะแสดงผลโดยเปลี่ยนปุ่ม "ร่วมประมูล" เป็น "Reserved" เป็นการยืนยันว่า address นี้มีสิทธิ์จะประมูลแล้ว  
 โดย **บรรทัดที่ 70** ประกาศฟังก์ชั่น ```markReserved``` **บรรทัดที่ 71** ประกาศตัวแปร  ```BookingInstance```  
 
-**บรรทัดที่ 73-74**  เป็นการตรวจสอบว่า ```Booking.sol``` ได้รับการ deploy แล้วหรือไม่ ถ้าเรียบร้อยแล้ว ให้ทำฟังก์ชั่น Instance ต่อ โดยนำค่าตัวแปร ``` instance```  ซึ่ง ณ ตอนนี้มีค่าเท่ากับ```Booking.sol ที่ deploy แล้ว``` ไปใส่ไว้ใน ```BookingInstance``` 
+**บรรทัดที่ 73-74**  เป็นการตรวจสอบว่า ```booking.sol``` ได้รับการ deploy แล้วหรือไม่ ถ้าเรียบร้อยแล้ว ให้ทำฟังก์ชั่น Instance ต่อ โดยนำค่าตัวแปร ``` instance```  ซึ่ง ณ ตอนนี้มีค่าเท่ากับ```booking.sol ที่ deploy แล้ว``` ไปใส่ไว้ใน ```BookingInstance``` 
 
 **บรรทัดที่ 76-77** เมื่อ function ```getBookers``` ทำงานแล้ว ให้นำพารามิเตอร์ที่ได้ไปให้กับ function ```Bookers``` ซึ่งจะทำงานต่อใน**บรรทัดที่ 78-80**   
 **บรรทัดที่ 78-80**  เป็น function ```For loop``` ซึ่งนำเอาข้อมูล Nft ทั้ง 16 จากบล็อกเชนมาเชื่อมต่อกับ back end คือ ```app.js```  แปลความได้ว่า **เมื่อมีเรากดจองสิทธิ์แล้วให้เปลี่ยนปุ่ม "ร่วมประมูล" เป็น "Reserved"** ซึ่งก่อนจะจบ function ```markReserved``` ให้ย้อนไปทำ function  ```bindEvents``` ใน**บรรทัดที่ 66** ก่อน 
@@ -396,7 +396,7 @@ $(function() {
 [![app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-12-14-PM.png](https://i.postimg.cc/BnKQNBKt/app-js-NFT-version3-Workspace-Visual-Studio-Code-9-15-2021-5-12-14-PM.png)](https://postimg.cc/bZqhwbLj)
 
 **บรรทัดที่ 100-103** เป็นการประกาศตัวแปรชื่อ ```account```  ให้มีค่าเริ่มต้นเป็น account เบอร์ 0 จากนั้นให้ทำ function เช่นเดียวกับ **บรรทัดที่ 73-74** 
-**บรรทัดที่ 106-108** เป็นการให้ ```BookingInstance``` ซึ่งตอนนี้มีค่าเท่ากับ ```Booking.sol``` อ่านค่า function ```Reserve``` ตามด้วย ```nftId``` ตามด้วย ```account``` จะได้ค่า ```nftId``` ออกมา ให้นำไปไว้ใน function ```result``` (ซึ่งค่าใน result หลังจากนี้ ไม่ได้ใช้ทำอะไรต่อ) จากนั้นให้วนไปทำ function ```markReserved``` ใน**บรรทัดที่ 70-84** ตามที่ได้กล่าวมาแล้ว  
+**บรรทัดที่ 106-108** เป็นการให้ ```BookingInstance``` ซึ่งตอนนี้มีค่าเท่ากับ ```booking.sol``` อ่านค่า function ```Reserve``` ตามด้วย ```nftId``` ตามด้วย ```account``` จะได้ค่า ```nftId``` ออกมา ให้นำไปไว้ใน function ```result``` (ซึ่งค่าใน result หลังจากนี้ ไม่ได้ใช้ทำอะไรต่อ) จากนั้นให้วนไปทำ function ```markReserved``` ใน**บรรทัดที่ 70-84** ตามที่ได้กล่าวมาแล้ว  
 
 
 ### 3.2 สร้างไฟล์ .json ซึ่งเป็นฐานข้อมูลของ Nfts ทั้ง 16 ชิ้น
